@@ -94,6 +94,9 @@ htmlcov/
 .pytest_cache/
 .tox/
 
+# ── Local Configuration (machine-specific paths, never commit) ────────────────
+config.local.ini
+
 # ── Secrets & Credentials ─────────────────────────────────────────────────────
 .env
 .env.*
