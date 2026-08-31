@@ -14,7 +14,6 @@ NYC-Taxi-Trip-Duration-Prediction/
 │   └── processed/    # Cleaned & feature-engineered data (not committed to Git)
 │
 ├── src/              # Reusable Python modules (feature engineering, modelling, etc.)
-├── notebooks/        # Exploratory and analysis Jupyter notebooks
 ├── reports/
 │   └── figures/      # Generated charts and visualisations
 ├── models/           # Serialised trained models (not committed to Git)
