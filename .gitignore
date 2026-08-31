@@ -1,0 +1,103 @@
+# =============================================================================
+# NYC Taxi Trip Duration Prediction — .gitignore
+# =============================================================================
+
+# ── Data ──────────────────────────────────────────────────────────────────────
+# Never commit raw or processed datasets (especially large Parquet/CSV files)
+data/raw/
+data/processed/
+*.csv
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.arrow
+*.json.gz
+*.zip
+*.tar.gz
+*.7z
+
+# ── Models ────────────────────────────────────────────────────────────────────
+# Trained model artefacts can be large; store via DVC or cloud storage instead
+models/*.pkl
+models/*.joblib
+models/*.h5
+models/*.pt
+models/*.pth
+models/*.onnx
+models/*.bin
+models/*.cbm   # CatBoost
+models/*.model
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+pip-wheel-metadata/
+*.whl
+
+# ── Virtual Environments ──────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+.env
+.python-version
+
+# ── Jupyter Notebooks ─────────────────────────────────────────────────────────
+# Keep .ipynb files but ignore checkpoint directories
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# ── IDEs & Editors ────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# ── OS Artefacts ──────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# ── Logs & Temporary Files ────────────────────────────────────────────────────
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# ── MLflow / Experiment Tracking ──────────────────────────────────────────────
+mlruns/
+mlartifacts/
+.mlflow/
+
+# ── DVC (Data Version Control) ────────────────────────────────────────────────
+# Uncomment if you adopt DVC later
+# .dvc/cache/
+# .dvc/tmp/
+
+# ── Coverage & Testing ────────────────────────────────────────────────────────
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# ── Secrets & Credentials ─────────────────────────────────────────────────────
+.env
+.env.*
+secrets.yaml
+secrets.yml
+*.pem
+*.key

@@ -1,0 +1,30 @@
+# =============================================================================
+# NYC Taxi Trip Duration Prediction — Requirements
+# Populate versions after finalising your environment.
+# Install with: pip install -r requirements.txt
+# =============================================================================
+
+# Core data manipulation
+pandas
+numpy
+
+# Machine learning
+scikit-learn
+xgboost
+lightgbm
+
+# Visualisation
+matplotlib
+seaborn
+
+# Notebook support
+jupyter
+ipykernel
+
+# Data loading (Parquet support)
+pyarrow
+fastparquet
+
+# Utilities
+tqdm
+python-dotenv
