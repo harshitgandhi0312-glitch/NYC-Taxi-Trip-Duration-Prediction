@@ -17,14 +17,12 @@ lightgbm
 matplotlib
 seaborn
 
-# Notebook support
-jupyter
-ipykernel
-
-# Data loading (Parquet support)
+# Data loading (Parquet + in-process OLAP)
 pyarrow
 fastparquet
+duckdb
 
 # Utilities
 tqdm
 python-dotenv
+joblib
