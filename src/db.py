@@ -11,8 +11,10 @@ Usage
     from src.db import get_connection, get_taxi_paths
 
     con = get_connection()
-    paths = get_taxi_paths()
-    df = con.execute(f"SELECT COUNT(*) FROM read_parquet({paths})").df()
+    paths = get_taxi_paths()          # list of str
+    # DuckDB read_parquet accepts a Python list directly as a parameter:
+    df = con.execute("SELECT COUNT(*) FROM read_parquet($paths)",
+                     {"paths": paths}).df()
 """
 
 import configparser
@@ -40,15 +42,24 @@ def _load_config() -> configparser.ConfigParser:
 
 
 def get_taxi_paths() -> list[str]:
-    """Return [path_2023, path_2024] as a Python list of strings."""
+    """Return [path_2023, path_2024] as a Python list of absolute path strings.
+
+    Raises
+    ------
+    FileNotFoundError
+        If a configured path does not exist on disk.
+    """
     cfg = _load_config()
     paths = [
         cfg["data"]["taxi_2023"],
         cfg["data"]["taxi_2024"],
     ]
-    for p in paths:
-        if not Path(p).exists():
-            raise FileNotFoundError(f"Parquet file not found: {p}")
+    missing = [p for p in paths if not Path(p).exists()]
+    if missing:
+        raise FileNotFoundError(
+            "The following Parquet files were not found:\n"
+            + "\n".join(f"  {p}" for p in missing)
+        )
     return paths
 
 
