@@ -18,6 +18,8 @@ data/processed/
 *.zip
 *.tar.gz
 *.7z
+*.npy
+*.npz
 
 # ── Models ────────────────────────────────────────────────────────────────────
 # Trained model artefacts can be large; store via DVC or cloud storage instead

@@ -26,3 +26,4 @@ duckdb
 tqdm
 python-dotenv
 joblib
+streamlit
