@@ -1,6 +1,10 @@
-﻿# NYC Taxi Trip Duration Prediction
+# NYC Taxi Trip Duration Prediction
 
 A machine learning portfolio project that predicts the total ride duration of NYC Yellow Taxi trips using the [NYC TLC Trip Record Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page).
+
+## 🚀 Live Demo
+
+**[▶ Try the Live Application](https://nyc-taxi-trip-duration-prediction-fhkne5ea89xukodxeysrij.streamlit.app/)**
 
 ## Project Overview
 
