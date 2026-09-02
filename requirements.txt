@@ -1,29 +1,10 @@
 # =============================================================================
-# NYC Taxi Trip Duration Prediction — Requirements
-# Populate versions after finalising your environment.
+# NYC Taxi Trip Duration Prediction — App Runtime Requirements
+# Only packages required by app.py and src/predict.py for Streamlit Cloud.
 # Install with: pip install -r requirements.txt
 # =============================================================================
 
-# Core data manipulation
-pandas
-numpy
-
-# Machine learning
-scikit-learn
-xgboost
-lightgbm
-
-# Visualisation
-matplotlib
-seaborn
-
-# Data loading (Parquet + in-process OLAP)
-pyarrow
-fastparquet
-duckdb
-
-# Utilities
-tqdm
-python-dotenv
-joblib
-streamlit
+streamlit==1.54.0
+numpy==2.4.2
+scikit-learn==1.8.0
+joblib==1.5.3

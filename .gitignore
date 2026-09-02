@@ -24,7 +24,7 @@ data/processed/
 # ── Models ────────────────────────────────────────────────────────────────────
 # Trained model artefacts can be large; store via DVC or cloud storage instead
 models/*.pkl
-models/*.joblib
+# models/*.joblib  ← commented out: hist_gradient_boosting_v2.joblib (1.15 MB) committed for Streamlit Cloud deployment
 models/*.h5
 models/*.pt
 models/*.pth
