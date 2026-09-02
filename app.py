@@ -30,6 +30,26 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 [data-testid="stAppViewContainer"] { background: #0F172A; }
 [data-testid="stHeader"] { background: #0F172A; }
 
+/* --- Text Contrast Fixes --- */
+[data-testid="stMarkdownContainer"] p, 
+[data-testid="stMarkdownContainer"] li {
+    color: #E2E8F0 !important;
+}
+[data-testid="stMarkdownContainer"] strong {
+    color: #F8FAFC !important;
+}
+label p {
+    color: #F1F5F9 !important;
+    font-weight: 500 !important;
+}
+[data-testid="stExpander"] summary p {
+    color: #F8FAFC !important;
+    font-weight: 600 !important;
+}
+[data-testid="stMarkdownContainer"] em {
+    color: #94A3B8 !important;
+}
+
 .hero {
     background: linear-gradient(135deg, #1E3A5F 0%, #0F172A 60%, #1A1040 100%);
     border-radius: 16px;
@@ -38,8 +58,8 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
     border: 1px solid #1E3A5F;
     text-align: center;
 }
-.hero h1 { color: #F8FAFC; font-size: 2.4rem; font-weight: 700; margin: 0 0 0.5rem 0; }
-.hero p  { color: #94A3B8; font-size: 1.05rem; margin: 0; }
+.hero h1 { color: #F8FAFC !important; font-size: 2.4rem; font-weight: 700; margin: 0 0 0.5rem 0; }
+.hero p  { color: #94A3B8 !important; font-size: 1.05rem; margin: 0; }
 
 .card {
     background: #1E293B;
@@ -48,7 +68,7 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
     border: 1px solid #334155;
     margin-bottom: 1.2rem;
 }
-.card h3 { color: #F1F5F9; font-size: 1.05rem; font-weight: 600; margin: 0 0 1rem 0; }
+.card h3 { color: #F1F5F9 !important; font-size: 1.05rem; font-weight: 600; margin: 0 0 1rem 0; }
 
 .result-box {
     background: linear-gradient(135deg, #1E3A8A 0%, #312E81 100%);
@@ -58,9 +78,9 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
     border: 1px solid #3B82F6;
     margin: 1.5rem 0;
 }
-.result-box .duration { color: #DBEAFE; font-size: 3.8rem; font-weight: 700; line-height: 1; }
-.result-box .unit     { color: #93C5FD; font-size: 1.1rem; margin-top: 0.4rem; }
-.result-box .note     { color: #64748B; font-size: 0.82rem; margin-top: 0.8rem; }
+.result-box .duration { color: #DBEAFE !important; font-size: 3.8rem; font-weight: 700; line-height: 1; }
+.result-box .unit     { color: #93C5FD !important; font-size: 1.1rem; margin-top: 0.4rem; }
+.result-box .note     { color: #94A3B8 !important; font-size: 0.85rem; margin-top: 0.8rem; }
 
 .metric-row {
     display: flex;
@@ -75,12 +95,12 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
     flex: 1;
     text-align: center;
 }
-.metric-chip .label { color: #64748B; font-size: 0.75rem; }
-.metric-chip .value { color: #F1F5F9; font-size: 1.1rem; font-weight: 600; }
+.metric-chip .label { color: #94A3B8 !important; font-size: 0.8rem; }
+.metric-chip .value { color: #F1F5F9 !important; font-size: 1.1rem; font-weight: 600; }
 
 .improvement-badge {
     background: #064E3B;
-    color: #6EE7B7;
+    color: #6EE7B7 !important;
     border-radius: 6px;
     padding: 0.15rem 0.5rem;
     font-size: 0.78rem;
@@ -89,7 +109,7 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
     margin-left: 0.4rem;
 }
 .section-title {
-    color: #F1F5F9;
+    color: #F1F5F9 !important;
     font-size: 1.2rem;
     font-weight: 600;
     margin: 0.5rem 0 1rem 0;
@@ -101,16 +121,16 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
     align-items: flex-start;
     gap: 0.7rem;
     padding: 0.5rem 0;
-    color: #CBD5E1;
+    color: #E2E8F0 !important;
     font-size: 0.9rem;
     border-bottom: 1px solid #1E293B;
 }
 .tag {
     background: #1E3A5F;
-    color: #93C5FD;
-    font-size: 0.72rem;
+    color: #93C5FD !important;
+    font-size: 0.75rem;
     border-radius: 4px;
-    padding: 0.1rem 0.45rem;
+    padding: 0.15rem 0.5rem;
     white-space: nowrap;
     margin-top: 0.15rem;
 }
@@ -272,14 +292,14 @@ with col_results:
 <h3>vs. Linear Regression Baseline</h3>
 <table style="width:100%;border-collapse:collapse;font-size:0.88rem;">
 <thead>
-<tr style="color:#64748B;">
+<tr style="color:#94A3B8;">
   <th style="text-align:left;padding:4px 0;">Metric</th>
   <th style="text-align:right;">Baseline (LR)</th>
   <th style="text-align:right;">HGBR (ours)</th>
   <th style="text-align:right;">Improvement</th>
 </tr>
 </thead>
-<tbody style="color:#CBD5E1;">
+<tbody style="color:#E2E8F0;">
 <tr>
   <td style="padding:5px 0;border-top:1px solid #334155;">MAE</td>
   <td style="text-align:right;">5.27 min</td>
